@@ -9,6 +9,8 @@ CSS_MAPPING = {
   profile: '[data-ng-include="templateUrl"] h4 a'
 }
 
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
+
 module ProfilesScraper
   # scrape profles
   def self.process(options={})
@@ -30,7 +32,8 @@ module ProfilesScraper
       )
 
       profile = Selenium::WebDriver::Chrome::Profile.new
-      profile['general.useragent.override'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
+
+      profile['general.useragent.override'] = USER_AGENT
       profile['modifyheaders.headers.dnt'] = 1
 
       Selenium::WebDriver.for(:chrome, 

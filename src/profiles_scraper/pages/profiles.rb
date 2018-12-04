@@ -18,14 +18,14 @@ module ProfilesScraper
 
         # instructions
         instructions = {
-          # open_google:      -> { driver.navigate.to('https://www.google.com') },
+          open_google:      -> { driver.navigate.to('https://www.google.com') },
           open_upwork:      -> { driver.navigate.to('https://www.upwork.com') },
-          # click_toogle:     -> { get_elements(:dropdown).last.click },
-          # pick_freelancers: -> { get_elements(:freelancer_option).last.click },
-          # type_ruby:        -> { get_elements(:search_input).last.send_keys('Ruby') },
-          # submit_form:      -> { get_elements(:search_input).last.submit },
-          # expand_filter:    -> { get_elements(:filter_btn).last.click },
-          # select_rate:      -> { get_elements(:rate_radio_option)[1].click },
+          click_toogle:     -> { get_elements(:dropdown).last.click },
+          pick_freelancers: -> { get_elements(:freelancer_option).last.click },
+          type_ruby:        -> { get_elements(:search_input).last.send_keys('Ruby') },
+          submit_form:      -> { get_elements(:search_input).last.submit },
+          expand_filter:    -> { get_elements(:filter_btn).last.click },
+          select_rate:      -> { get_elements(:rate_radio_option)[1].click },
         }
 
         # execute each instruction
